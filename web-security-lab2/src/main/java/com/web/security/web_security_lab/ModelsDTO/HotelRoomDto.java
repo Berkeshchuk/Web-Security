@@ -11,9 +11,9 @@ public class HotelRoomDto {
     private long id;
     private String name;
     private String description;
-    private double price;
-    private boolean available;
-    private float area;
-    private int rooms;
+    private Double price;
+    private Boolean available;
+    private Float area;
+    private Integer rooms;
     private List<String> amenities;
 }

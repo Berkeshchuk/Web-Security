@@ -10,11 +10,13 @@ import java.util.List;
 
 import lombok.experimental.SuperBuilder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "hotel_rooms")
 @SuperBuilder
 @Data
+@NoArgsConstructor
 public class HotelRoom extends ServiceItem {
     @Column(nullable = false)
     private float area;
