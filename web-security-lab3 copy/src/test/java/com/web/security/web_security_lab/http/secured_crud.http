@@ -1,0 +1,55 @@
+### Отримати всі кімнати
+GET http://localhost:8080/rooms
+Accept: application/json
+Authorization: Basic admin admin
+
+###
+
+### Отримати кімнату за id
+GET http://localhost:8080/rooms/4
+Accept: application/json
+Authorization: Basic admin admin
+
+###
+
+### Додати нову кімнату
+POST http://localhost:8080/rooms/add_room
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic admin admin
+
+{
+  "name": "Luxury Suite",
+  "description": "Великий номер з видом на море",
+  "price": 250.0,
+  "available": true,
+  "area": 45.5,
+  "rooms": 2,
+  "amenities": ["WiFi", "Кондиціонер", "Телевізор"]
+}
+
+###
+
+### Оновити кімнату
+PUT http://localhost:8080/rooms/update_room
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic admin admin
+
+{
+  "id": 1,
+  "name": "Luxury Suite Updated",
+  "description": "Оновлений опис",
+  "price": 270.0,
+  "available": false,
+  "area": 50.0,
+  "rooms": 3,
+  "amenities": ["WiFi", "Кондиціонер", "Спа"]
+}
+
+###
+
+### Видалити кімнату
+DELETE http://localhost:8080/rooms/delete_room/5
+Accept: application/json
+Authorization: Basic admin admin
